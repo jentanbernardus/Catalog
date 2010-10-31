@@ -1,0 +1,62 @@
+body #gridOverlay {
+  width: 640px;
+  margin-left: -320px;
+}
+
+body #wrapper {
+  width: 640px;
+}
+
+body header nav {
+  width: 460px;
+}
+
+body section.pagePost.post .infoWrap,
+body section.pagePost.page .infoWrap {
+  width: 640px;
+}
+
+body section.pagePost.post .infoWrap span, 
+body section.pagePost.post .infoWrap abbr {
+  display: inline-block;
+  width: 140px;
+  float: left;
+}
+
+body section.pagePost.post .infoWrap span.categories {
+  width: 300px;
+}
+
+body section.pagePost.page .entry {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  width: 620px;
+  float: left;
+}
+
+body section.pagePost.page .gallery {
+  width: 640px;
+}
+
+body section.pagePost.page .gallery img {
+  max-width: 620px;
+}
+
+body section#sidebarToggle .padding .navigation {
+  width: 140px;
+  text-align: right;
+}
+
+body section#sidebarToggle .padding .navigation .nextPage {
+  padding: 0 0 0 10px;
+}
+
+body section#sidebarToggle .padding .navigation .previousPage {
+  padding: 0;
+}
+
+body footer {
+  width: 640px;
+}

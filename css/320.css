@@ -1,0 +1,87 @@
+body #gridOverlay {
+  width: 320px;
+  margin-left: -160px;
+}
+
+body #wrapper {
+  width: 320px;
+}
+
+body header {
+  padding: 20px 0 0;
+}
+
+body header nav {
+  width: 300px;
+}
+
+body header nav ul {
+  text-align: left;
+}
+
+body section.pagePost .meta .wordCount,
+body section.pagePost .meta .categories {
+  display: none;
+}
+
+body section.pagePost.post .infoWrap,
+body section.pagePost.page .infoWrap {
+  width: 320px;
+}
+
+body section.pagePost.post .infoWrap span.categories {
+  display: none;
+}
+
+body section.pagePost.post .infoWrap span.comments {
+  text-align: right;
+}
+
+body section.pagePost.post .entry p,
+body section.pagePost.post .entry h2,
+body section.pagePost.post .entry h3 {
+  padding: 0;
+}
+
+body section.pagePost.post .entry h3 {
+  font-size: 14px;
+}
+
+body section.pagePost.post .entry p img {
+  margin: 0;
+  max-width: 300px;
+}
+
+body section.pagePost.post .entry {
+  width: 300px;
+}
+
+body section.pagePost.page .entry {
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  width: 300px;
+}
+
+body section.pagePost.page .gallery {
+  width: 320px;
+}
+
+
+body section.pagePost.page .gallery img {
+  max-width: 300px;
+}
+
+body section#sidebar ul li {
+  margin: 0;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 5px 10px;
+  width: 320px;  
+}
+
+body section#sidebar ul li:last-child {
+  border-bottom: none; 
+}
+
+body footer {
+  width: 320px;
+}
