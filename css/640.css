@@ -53,7 +53,7 @@ body section#sidebarToggle .padding .navigation .nextPage {
   padding: 0 0 0 10px;
 }
 
-body section#sidebarToggle .padding .navigation .previousPage {
+body section#sidebarToggle .padding .navigation .previousPage a {
   padding: 0;
 }
 
