@@ -412,16 +412,19 @@ section.pagePost.page .gallery {
 
 section.pagePost.page .gallery p {
   margin: 0;
-  overflow: auto;
 }
 
 section.pagePost.page .gallery img {
   max-width: 620px;
-  margin: 0 10px;
-  padding: 10px 0;
+  margin: 10px;
   display: inline-block;
   float: left;
   height: auto;
+}
+
+section.pagePost.page .gallery img.shadow {
+  -moz-box-shadow: 0 5px 15px #888;
+  -webkit-box-shadow: 0 5px 15px #888;
 }
 
 /* === INDEX PAGE === */
