@@ -2,6 +2,7 @@
 jQuery(document).ready(function() { 
   jQuery("footer").append('<a href="#" class="grid">Grid</a> - Catalog&trade; theme'); //we insert footer info here to make it harder to delete because I'm annoying
   jQuery("#sidebar").hide(); //we hide the sidebar by default
+  jQuery(".previousPage:empty").remove()
 });  
 //toggle grid
 jQuery(document).ready(function() { 

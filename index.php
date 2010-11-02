@@ -16,13 +16,13 @@
   		<?php endwhile; ?>
   
       <?php if (show_posts_nav()) : ?>
-        <div class="navigation clearfix">
+        <div class="navigation index clearfix">
     			<div class="alignLeft">
     		    <div class="previousPage">
     		      <?php next_posts_link('Older entries') ?>
     		    </div>
     			</div>
-    			<div class="alignRight">
+    			<div class="alignRight clearfix">
     		    <div class="nextPage">
     		    <?php previous_posts_link('Newer entries') ?>
     		    </div>

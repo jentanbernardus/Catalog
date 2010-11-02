@@ -11,6 +11,10 @@ body header nav {
   width: 460px;
 }
 
+body section#content .navigation.postNav {
+  width: 620px;
+}
+
 body section.pagePost.post .infoWrap,
 body section.pagePost.page .infoWrap {
   width: 640px;
@@ -24,7 +28,7 @@ body section.pagePost.post .infoWrap abbr {
 }
 
 body section.pagePost.post .infoWrap span.categories {
-  width: 300px;
+  width: 140px;
 }
 
 body section.pagePost.page .entry {

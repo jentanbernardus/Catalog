@@ -213,36 +213,13 @@ section#content {
 }
 
 /* === NAVIGATION === */
-section#content .navigation {
-  padding: 10px 0;
-  margin: 0 10px;
-  text-align: right;
-  display: block;
-  float: left;
-  width: 100%;
-}
-
-section#content .navigation.bottom {
-  padding: 10px 0;
-  border-top: 1px solid #000;
-}
-
 section#content .navigation a {
   color: #000;
+  text-decoration: none;
 }
 
 section#content .navigation a:hover {
   text-decoration: underline;
-}
-
-section#content .navigation .alignRight,
-section#content .navigation .alignLeft {
-  display: inline-block;
-  text-align: right;
-}
-
-section#content .navigation .alignLeft {
-  float: left;
 }
 
 /* === POSTS & PAGES === */
@@ -251,6 +228,7 @@ section.pagePost {
   padding: 10px 0;
   display: block;
   width: 100%;
+  clear: both;
 }
 
 section.pagePost h2 {
@@ -319,16 +297,31 @@ section.pagePost.index:first-child h2.indexTitle {
   border-top: none;
 }
 
+section#content .navigation.index {
+  margin: 10px; 
+  padding: 10px 0;
+  border-top: 1px solid #000;
+}
+
+section#content .navigation.index .alignLeft,
+section#content .navigation.index .alignRight {
+  width: 140px;
+  display: inline-block;
+}
+
+section#content .navigation.index .alignRight {
+  float: right;
+  text-align: right;
+}
+
 /* === POST SPECIFIC === */
 section.pagePost.post .infoWrap {
-  width: 320px;
+  width: 960px;
   float: left;
   padding: 10px 0;
   display: inline-block;
 }
 
-section.pagePost.post .infoWrap span, 
-section.pagePost.post .infoWrap abbr,
 section.pagePost.post .infoWrap .entryTitle {
   display: block;
   margin: 0 10px;
@@ -336,7 +329,36 @@ section.pagePost.post .infoWrap .entryTitle {
 
 section.pagePost.post .infoWrap span, 
 section.pagePost.post .infoWrap abbr {
-  width: 300px;
+  width: 140px;
+  display: inline-block;
+  margin: 0 10px;
+  float: left;
+}
+
+section.pagePost.post .infoWrap span.categories {
+  width: 460px;
+}
+
+section.pagePost.post .infoWrap span.comments {
+  text-align: right;
+}
+
+section#content .navigation.postNav {
+  width: 940px;
+  display: inline-block;
+  float: left;
+  padding: 5px 0;
+  margin: 0 10px;
+  border-top: none;
+}
+
+section#content .navigation.postNav .previousPage,
+section#content .navigation.postNav .nextPage {
+  display: inline-block;
+}
+
+section#content .navigation.postNav .previousPage {
+  padding: 0 10px 0 0;
 }
 
 section.pagePost.post .entry {

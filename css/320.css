@@ -19,6 +19,11 @@ body header nav ul {
   text-align: left;
 }
 
+body section#content .navigation.postNav {
+  width: 300px;
+  text-align: right;
+}
+
 body section.pagePost .meta .wordCount,
 body section.pagePost .meta .categories {
   display: none;
@@ -29,7 +34,8 @@ body section.pagePost.page .infoWrap {
   width: 320px;
 }
 
-body section.pagePost.post .infoWrap span.categories {
+body section.pagePost.post .infoWrap span.categories,
+body section.pagePost.post .infoWrap span.wordCount {
   display: none;
 }
 
@@ -41,10 +47,6 @@ body section.pagePost.post .entry p,
 body section.pagePost.post .entry h2,
 body section.pagePost.post .entry h3 {
   padding: 0;
-}
-
-body section.pagePost.post .entry h3 {
-  font-size: 14px;
 }
 
 body section.pagePost.post .entry p img {
