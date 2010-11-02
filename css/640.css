@@ -31,6 +31,10 @@ body section.pagePost.post .infoWrap span.categories {
   width: 140px;
 }
 
+body section.pagePost.post .infoWrap .entryTitle h2 {
+  padding: 0;
+}
+
 body section.pagePost.page .entry {
   -moz-column-count: 2;
   -moz-column-gap: 20px;

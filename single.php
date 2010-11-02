@@ -25,18 +25,8 @@
 				  </div>
 				  <?php endwhile; ?>
   			</section>
-
-        <!-- navigation bottom-->  			
-<!--
-  		  <div class="navigation bottom">
-  		    <div class="alignLeft">
-				    <div class="previousPage"><?php previous_post_link( '%link', 'previous' ); ?></div>
-					</div>
-					<div class="alignRight">
-				    <div class="nextPage"><?php next_post_link( '%link', 'next' ); ?></div>
-				  </div>
-				</div>
--->
+  			
+  			<?php comments_template('', true); ?>
         
       </section>
     </section>

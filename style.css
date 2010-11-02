@@ -327,6 +327,10 @@ section.pagePost.post .infoWrap .entryTitle {
   margin: 0 10px;
 }
 
+section.pagePost.post .infoWrap .entryTitle h2 {
+  padding: 0 0 0 320px;
+}
+
 section.pagePost.post .infoWrap span, 
 section.pagePost.post .infoWrap abbr {
   width: 140px;
@@ -395,6 +399,15 @@ section.pagePost.post .entry p img {
   max-width: 620px;
   float: left;
   height: auto;
+}
+
+/* === COMMENTS === */
+section#comments {
+  width: 640px;
+  float: right;
+  padding: 20px 170px 20px 10px;
+  margin: 20px 0 0 0;
+  border-top: 1px solid #000;
 }
 
 /* === PAGE SPECIFIC === */
