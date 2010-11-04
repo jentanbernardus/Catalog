@@ -1,11 +1,11 @@
 /*  
-Theme Name: Catalog
-Theme URI: http://andychung.ca / http://staydecent.com
-Description: A theme for artists and designers
-Author: Andy Chung / Adrian Unger
-Author URI: http://andychung.ca / http://staydecent.com
-Version: 1.0
-Tags: Responsive, Design, Art, Portfolio
+  Theme Name: Catalog
+  Theme URI: http://andychung.ca / http://staydecent.com
+  Description: A theme for artists and designers
+  Author: Andy Chung / Adrian Unger
+  Author URI: http://andychung.ca / http://staydecent.com
+  Version: 1.0
+  Tags: Responsive, Design, Art, Portfolio
 */
 
 @import url("css/640.css") screen and (max-width: 960px);
@@ -46,6 +46,12 @@ a:active {
 
 a:hover {
   text-decoration: underline;
+}
+
+a.block {
+  display:block;
+  width:100%;
+  height:100%;
 }
 
 p {
@@ -170,7 +176,7 @@ header a:hover {
 
 header #logo h1 {
   text-indent: -9999px;
-  visibility: hidden;
+  overflow:hidden;
 }
 
 header nav {
@@ -492,10 +498,13 @@ section#content ul.index li.project a:hover {
   text-decoration: none;
 }
 
-section#content ul.index li.project .brief {
+section#content ul.index li.project .brief,section#content ul.index li.project .brief a {
   font-style: italic;
   color: #aaa;
   font-size: 11px;
+}
+section#content ul.index li.project .brief a:hover {
+  color:#333;
 }
 
 /* === ARCHIVES === */
