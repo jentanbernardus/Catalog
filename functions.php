@@ -73,16 +73,22 @@ function catalog_init() {
     */
     function catalog_project_gallery_content() {
         global $post;
-        $meta_values = get_post_meta($post->ID, 'project_gallery_style', true);
+        $style = get_post_meta($post->ID, 'project_gallery_style', true);
+        $exclude = get_post_meta($post->ID, 'project_gallery_exclude', true);
 
         wp_nonce_field( plugin_basename(__FILE__), 'catalog_project_gallery_noncename' );
 
-        echo '<label for="project_gallery_style">' . __("How we display the project's media", 'catalog' ) . '</label> ';
+        echo '<p><label for="project_gallery_style">' . __("How should we display the project's media?", 'catalog' ) . '</label> ';
         ?>
     <select id="project_gallery_style" name="project_gallery_style">
-      <option value="list"<?php if ($meta_values === 'list') echo ' selected="selected"'; ?>>List</option>
-      <option value="slideshow"<?php if ($meta_values === 'slideshow') echo ' selected="selected"'; ?>>Slideshow</option>
-    </select>
+      <option value="list"<?php if ($style === 'list') echo ' selected="selected"'; ?>>List</option>
+      <option value="slideshow"<?php if ($style === 'slideshow') echo ' selected="selected"'; ?>>Slideshow</option>
+    </select></p>
+   
+    <p><label for="project_gallery_exclude" class="selectit">
+        <?php echo __("Exclude the featured image from the gallery?", 'catalog' ) ?>
+        <input name="project_gallery_exclude" type="checkbox" id="project_gallery_exclude" value="true"<?php if ($exclude) echo '  checked="checked"'; ?>>
+    </label></p>
         <?php
     }
 
@@ -100,13 +106,19 @@ function catalog_init() {
         if ( 'project' !== $_POST['post_type'] )
             return $post_id;
 
-        # Save
-        $data = $_POST['project_gallery_style'];
-        $key = 'project_gallery_style';
+        # Save Style
+        $style_data = $_POST['project_gallery_style'];
+        $style_key = 'project_gallery_style';
 
-        if ( ! update_post_meta($post_id, $key, $data) ) {
-            add_post_meta($post_id, $key, $data, true);
-        }
+        if ( ! update_post_meta($post_id, $style_key, $style_data) )
+            add_post_meta($post_id, $style_key, $style_data, true);
+
+        # Save Exclude
+        $exclude_data = $_POST['project_gallery_exclude'];
+        $exclude_key = 'project_gallery_exclude';
+
+        if ( ! update_post_meta($post_id, $exclude_key, $exclude_data) )
+            add_post_meta($post_id, $exclude_key, $exclude_data, true);
 
         return true;
     }

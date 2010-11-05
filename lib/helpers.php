@@ -19,11 +19,21 @@ function catalog_gallery() {
         'post_parent' => get_the_ID()
     ));
 
-    $meta_value = get_post_meta(get_the_ID(), 'project_gallery_style', true);
+    $style = get_post_meta(get_the_ID(), 'project_gallery_style', true);
+    $exclude = get_post_meta(get_the_ID(), 'project_gallery_exclude', true);
+
+    $thumb_id = get_post_thumbnail_id(get_the_ID());
 
     if ($attachments) {
-        foreach ($attachments as $attachment)
-            echo '<div class="gallery-item">'.wp_get_attachment_image($attachment->ID, 'full').'</div>';
+        if ( $exclude ) {
+            foreach ($attachments as $attachment)
+                if ( $attachment->ID != $thumb_id )
+                    echo '<div class="gallery-item">'.wp_get_attachment_image($attachment->ID, 'full').'</div>';
+        }
+        else {
+            foreach ($attachments as $attachment)
+                echo '<div class="gallery-item">'.wp_get_attachment_image($attachment->ID, 'full').'</div>';
+        }   
     }
 }
 
