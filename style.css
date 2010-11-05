@@ -481,7 +481,7 @@ section#content ul.index li.project h3 {
   display: inline;
 }
 
-section#content ul.index li.project:hover h3 {
+section#content ul.index li.project:hover h3 a {
   text-decoration: underline;
 }
 

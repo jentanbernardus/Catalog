@@ -39,13 +39,17 @@ jQuery(document).ready(function($) {
     }
   });
   /*
-    Grid overlay
+    Hide the sidebar 
   */
-  $(".grid, #gridOverlay").click(function() {
-    $("#gridOverlay").toggleClass("show");
-  });
+  $("#sidebar").hide();
   /*
     We insert footer info here to make it harder to delete because I'm annoying
   */
   $("footer").append('<a href="#" class="grid">Grid</a> - Catalog&trade; theme');
+  /*
+    Grid overlay (we place this last so the previous function works)
+  */
+  $(".grid, #gridOverlay").click(function() {
+    $("#gridOverlay").toggleClass("show");
+  });
 });  
