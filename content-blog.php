@@ -1,20 +1,14 @@
-<section id="post-<?php the_ID() ?>" class="pagePost post clearfix">
-    <div class="infoWrap clearfix fade">
-        <div class="entryTitle">
-            <h2 class="title"><?php the_title() ?></h2>
-        </div>
+<section id="post-<?php the_ID() ?>" class="pagePost index clearfix fade">
 
-        <abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>">
-        <?php the_time( get_option( 'date_format' ) ); ?>
-        </abbr>
+    <h2 class="indexTitle">
+        <a href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>" rel="bookmark"><?php the_title() ?></a>
+    </h2>
+    
+    <div class="meta">
+        <abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr>
+        <span class="wordCount c1"><?php echo word_count(); ?> words</span>
+        <span class="categories c1"><?php the_category(', ') ?></span>
+        <span class="comments c1"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span>
+    </div>
 
-        <span class="wordCount"><?php echo word_count(); ?> words</span>
-        <span class="categories">posted in <?php the_category(', ') ?></span>
-        <span class="comments"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span>
-    </div>
-    <div class="entry fade">
-        <?php the_content(); ?>
-    </div>
 </section>
-
-<?php comments_template('', true); ?>
