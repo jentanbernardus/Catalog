@@ -29,6 +29,3 @@
         <!-- navigation -->
       </div>
     </section>
-    <section id="sidebar" class="clearfix">
-      <?php wp_nav_menu( array( 'theme_location' => 'secondary-menu','container_class' => 'clearfix','menu_class' => 'clearfix' ) ); ?>
-    </section>

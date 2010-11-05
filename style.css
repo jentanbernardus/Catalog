@@ -1,18 +1,18 @@
 /*  
-  Theme Name: Catalog
-  Theme URI: http://andychung.ca / http://staydecent.com
-  Description: A theme for artists and designers
-  Author: Andy Chung / Adrian Unger
-  Author URI: http://andychung.ca / http://staydecent.com
-  Version: 1.0
-  Tags: Responsive, Design, Art, Portfolio
+Theme Name: Catalog
+Theme URI: http://
+Description: A theme for artists and designers
+Author: Andy Chung / Adrian Unger
+Author URI: http://andychung.ca / http://staydecent.com
+Version: 1.0
+Tags: Responsive, Design, Art, Portfolio
 */
 
 @import url("css/640.css") screen and (max-width: 960px);
 @import url("css/320.css") screen and (max-width: 640px);
 
 
-/* === GENERAL! === */
+/* === GENERAL === */
 * {
   margin: 0;
   padding: 0;
@@ -176,7 +176,7 @@ header a:hover {
 
 header #logo h1 {
   text-indent: -9999px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 header nav {
@@ -219,13 +219,36 @@ section#content {
 }
 
 /* === NAVIGATION === */
+section#content .navigation {
+  padding: 10px 0;
+  margin: 0 10px;
+  text-align: right;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+section#content .navigation.bottom {
+  padding: 10px 0;
+  border-top: 1px solid #000;
+}
+
 section#content .navigation a {
   color: #000;
-  text-decoration: none;
 }
 
 section#content .navigation a:hover {
   text-decoration: underline;
+}
+
+section#content .navigation .alignRight,
+section#content .navigation .alignLeft {
+  display: inline-block;
+  text-align: right;
+}
+
+section#content .navigation .alignLeft {
+  float: left;
 }
 
 /* === POSTS & PAGES === */
@@ -234,7 +257,6 @@ section.pagePost {
   padding: 10px 0;
   display: block;
   width: 100%;
-  clear: both;
 }
 
 section.pagePost h2 {
@@ -303,72 +325,24 @@ section.pagePost.index:first-child h2.indexTitle {
   border-top: none;
 }
 
-section#content .navigation.index {
-  margin: 10px; 
-  padding: 10px 0;
-  border-top: 1px solid #000;
-}
-
-section#content .navigation.index .alignLeft,
-section#content .navigation.index .alignRight {
-  width: 140px;
-  display: inline-block;
-}
-
-section#content .navigation.index .alignRight {
-  float: right;
-  text-align: right;
-}
-
 /* === POST SPECIFIC === */
 section.pagePost.post .infoWrap {
-  width: 960px;
+  width: 320px;
   float: left;
   padding: 10px 0;
   display: inline-block;
 }
 
+section.pagePost.post .infoWrap span, 
+section.pagePost.post .infoWrap abbr,
 section.pagePost.post .infoWrap .entryTitle {
   display: block;
   margin: 0 10px;
 }
 
-section.pagePost.post .infoWrap .entryTitle h2 {
-  padding: 0 0 0 320px;
-}
-
 section.pagePost.post .infoWrap span, 
 section.pagePost.post .infoWrap abbr {
-  width: 140px;
-  display: inline-block;
-  margin: 0 10px;
-  float: left;
-}
-
-section.pagePost.post .infoWrap span.categories {
-  width: 460px;
-}
-
-section.pagePost.post .infoWrap span.comments {
-  text-align: right;
-}
-
-section#content .navigation.postNav {
-  width: 940px;
-  display: inline-block;
-  float: left;
-  padding: 5px 0;
-  margin: 0 10px;
-  border-top: none;
-}
-
-section#content .navigation.postNav .previousPage,
-section#content .navigation.postNav .nextPage {
-  display: inline-block;
-}
-
-section#content .navigation.postNav .previousPage {
-  padding: 0 10px 0 0;
+  width: 300px;
 }
 
 section.pagePost.post .entry {
@@ -405,15 +379,6 @@ section.pagePost.post .entry p img {
   max-width: 620px;
   float: left;
   height: auto;
-}
-
-/* === COMMENTS === */
-section#comments {
-  width: 640px;
-  float: right;
-  padding: 20px 170px 20px 10px;
-  margin: 20px 0 0 0;
-  border-top: 1px solid #000;
 }
 
 /* === PAGE SPECIFIC === */
@@ -466,6 +431,8 @@ section.pagePost.page .gallery img {
 section.pagePost.page .gallery img.shadow {
   -moz-box-shadow: 0 5px 15px #888;
   -webkit-box-shadow: 0 5px 15px #888;
+  -o-box-shadow: 0 5px 15px #888;
+  box-shadow: 0 5px 15px #888;
 }
 
 /* === INDEX PAGE === */
@@ -503,6 +470,7 @@ section#content ul.index li.project .brief,section#content ul.index li.project .
   color: #aaa;
   font-size: 11px;
 }
+
 section#content ul.index li.project .brief a:hover {
   color:#333;
 }
@@ -607,18 +575,18 @@ footer a {
 /* === CLEARFIX === */
 
 .clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
 }
  
 html[xmlns] .clearfix {
-	display: block;
+  display: block;
 }
  
 * html .clearfix {
-	height: 1%;
+  height: 1%;
 }
