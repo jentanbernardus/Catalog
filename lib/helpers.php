@@ -10,6 +10,8 @@
     them. Loads any JS according to `project_gallery_style`.
 
     Use within the loop.
+
+    TODO: Properly load Slideshow JS when needed.
 */
 function catalog_gallery() {
     $attachments = get_posts(array(

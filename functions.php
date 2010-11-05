@@ -79,6 +79,7 @@ function catalog_init() {
         wp_nonce_field( plugin_basename(__FILE__), 'catalog_project_gallery_noncename' );
 
         echo '<p><label for="project_gallery_style">' . __("How should we display the project's media?", 'catalog' ) . '</label> ';
+        
         ?>
     <select id="project_gallery_style" name="project_gallery_style">
       <option value="list"<?php if ($style === 'list') echo ' selected="selected"'; ?>>List</option>
