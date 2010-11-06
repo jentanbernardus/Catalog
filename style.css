@@ -14,34 +14,37 @@ Tags: Responsive, Design, Art, Portfolio
 
 /* === GENERAL === */
 * {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  font-family: "helvetica neue", helvetica, arial, sans-serif;
-  font-size: 12px;
-  line-height: 21px;
-  color: #000;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  height: 100%;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
+    font-size: 12px;
+    line-height: 21px;
+    color: #000;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 a {
-  color: blue;
-  text-decoration: none;
-  outline: none;
+    color: #000;
+    text-decoration: none;
+    outline: none;
 }
 
 a:active {
+    color: red;
 }
 
 a:hover {
@@ -223,13 +226,21 @@ section#content .navigation {
   padding: 10px 0;
   margin: 0 10px;
   display: block;
-  float: left;
   width: 940px;
 }
 
 section#content .navigation .nextPage,
 section#content .navigation .previousPage {
     display: inline;
+}
+
+section#content .navigation .nextPage {
+    padding: 0 0 0 10px;
+}
+
+section#content .navigation .nextPage span.inactive,
+section#content .navigation .previousPage span.inactive {
+    color: #ccc;
 }
 
 section#content .navigation a {
@@ -248,6 +259,46 @@ section#content .navigation .alignLeft {
 
 section#content .navigation .alignLeft {
   float: left;
+}
+
+/* === INDEX PAGE === */
+section#content ul.index li.project {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+section#content ul.index li.project h3 {
+  color: 000;
+  font-size: 12px;
+  font-weight: normal;
+  display: inline;
+}
+
+section#content ul.index li.project:hover h3 a {
+  text-decoration: underline;
+}
+
+section#content ul.index li.project a img {
+  border: none;
+  outline: none;
+}
+
+section#content ul.index li.project a {
+  color: #000;
+}
+
+section#content ul.index li.project a:hover {
+  text-decoration: none;
+}
+
+section#content ul.index li.project .brief,section#content ul.index li.project .brief a {
+  font-style: italic;
+  color: #aaa;
+  font-size: 11px;
+}
+
+section#content ul.index li.project .brief a:hover {
+  color:#333;
 }
 
 /* === POSTS & PAGES === */
@@ -310,7 +361,7 @@ section.pagePost .entry a:hover {
   text-decoration: none;
 }
 
-/* === INDEX SPECIFIC === */
+/* === BLOG INDEX SPECIFIC === */
 section.pagePost.index {
   padding: 10px 0 0;
 }
@@ -380,6 +431,59 @@ section.pagePost.post .entry p img {
   height: auto;
 }
 
+/* === SECONDARY MENU === */
+section#secondaryMenuToggle { 
+    display: block; 
+}
+
+section#secondaryMenuToggle .padding {
+    padding: 10px;
+}
+
+section#secondaryMenuToggle .padding a {
+      color: #000;
+}
+
+section#content section#secondaryMenuToggle .padding .navigation.postNav {
+    float: right;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: auto;
+}
+
+section#secondaryMenu {
+  display: block;
+}
+
+section#secondaryMenu nav {
+  padding: 10px 0;
+  display: block;
+}
+
+section#secondaryMenu a {
+  color: #000;
+}
+
+section#secondaryMenu ul {
+  width: 100%;
+  display: block;
+}
+
+section#secondaryMenu ul li {
+  margin: 0 10px;
+  min-height: 1px;
+  float: left;
+  display: inline-block;
+  width: 140px;  
+}
+
+section#secondaryMenu a:hover,
+section#secondaryMenu ul li.current-menu-item a {
+  text-decoration: underline;
+}
+
 /* === PAGE SPECIFIC === */
 section.pagePost.page .infoWrap {
   width: 320px;
@@ -434,46 +538,6 @@ section.pagePost.page .gallery img.shadow {
   box-shadow: 0 5px 15px #888;
 }
 
-/* === INDEX PAGE === */
-section#content ul.index li.project {
-  margin: 20px 10px;
-  text-align: center;
-}
-
-section#content ul.index li.project h3 {
-  color: 000;
-  font-size: 12px;
-  font-weight: normal;
-  display: inline;
-}
-
-section#content ul.index li.project:hover h3 a {
-  text-decoration: underline;
-}
-
-section#content ul.index li.project a img {
-  border: none;
-  outline: none;
-}
-
-section#content ul.index li.project a {
-  color: #000;
-}
-
-section#content ul.index li.project a:hover {
-  text-decoration: none;
-}
-
-section#content ul.index li.project .brief,section#content ul.index li.project .brief a {
-  font-style: italic;
-  color: #aaa;
-  font-size: 11px;
-}
-
-section#content ul.index li.project .brief a:hover {
-  color:#333;
-}
-
 /* === ARCHIVES === */
 .archiveTitle {
   display: block;
@@ -486,50 +550,49 @@ section#content ul.index li.project .brief a:hover {
   display: block;
   text-align: center;
 }
-  
+
 /* === SIDEBAR === */
-section#sidebarToggle { 
-  display: block; 
-}
-
-section#sidebarToggle .padding {
-  padding: 10px;
-}
-
-section#sidebarToggle .padding a {
-  color: #000;
-}
-
 section#sidebar {
-  display: block;
+    padding: 50px 0;
+    display: block;
 }
 
-section#sidebar nav {
-  padding: 10px 0;
-  display: block;
+section#sidebar .widget {
+    width: 140px;
+    display: inline-block;
+    float: left;
+    margin: 0 10px;
 }
 
-section#sidebar a {
-  color: #000;
+section#sidebar .widget h3 {
+    font-size: 12px;
+    padding: 0 0 7px 0;
 }
 
-section#sidebar ul {
-  width: 100%;
-  display: block;
+/* === SEARCH === */
+.searchContainer {
+    width: 100%;
 }
 
-section#sidebar ul li {
-  margin: 0 10px;
-  min-height: 1px;
-  float: left;
-  display: inline-block;
-  width: 140px;  
+.searchContainer input#s {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 3px;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;
 }
 
-section#sidebar a:hover,
-section#sidebar ul li.current-menu-item a {
-  text-decoration: underline;
+.searchContainer input#s:focus {
+    background-color: yellow;
 }
+
+.searchContainer input#searchsubmit {
+    border-width: 1px 1px 1px 0;
+    border-color: #ccc;
+    border-style: solid;
+    background-color: #f2f2f2;
+    padding: 0 5px;
+}
+    
 
 /* === FOOTER === */
 footer {
@@ -565,3 +628,109 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%;
 }
+
+/* START hbox/vbox normalization from http://alex.dojotoolkit.org/2009/08/css-3-progress/ */
+/* hbox and vbox classes */
+ 
+.hbox {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: stretch;
+ 
+	display: -moz-box;
+	-moz-box-orient: horizontal;
+	-moz-box-align: stretch;
+ 
+	display: box;
+	box-orient: horizontal;
+	box-align: stretch;
+}
+ 
+.hbox > * {
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	box-flex: 0;
+	display: block;
+}
+ 
+.vbox {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: stretch;
+ 
+	display: -moz-box;
+	-moz-box-orient: vertical;
+	-moz-box-align: stretch;
+ 
+	display: box;
+	box-orient: vertical;
+	box-align: stretch;
+}
+ 
+.vbox > * {
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	box-flex: 0;
+	display: block;
+}
+ 
+.spacer {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+}
+ 
+.reverse {
+	-webkit-box-direction: reverse;
+	-moz-box-direction: reverse;
+	box-direction: reverse;
+}
+ 
+.boxFlex0 {
+	-webkit-box-flex: 0;
+	-moz-box-flex: 0;
+	box-flex: 0;
+}
+ 
+.boxFlex1, .boxFlex {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+}
+ 
+.boxFlex2 {
+	-webkit-box-flex: 2;
+	-moz-box-flex: 2;
+	box-flex: 2;
+}
+ 
+.boxGroup1 {
+	-webkit-box-flex-group: 1;
+	-moz-box-flex-group: 1;
+	box-flex-group: 1;
+}
+ 
+.boxGroup2 {
+	-webkit-box-flex-group: 2;
+	-moz-box-flex-group: 2;
+	box-flex-group: 2;
+}
+ 
+.start {
+	-webkit-box-pack: start;
+	-moz-box-pack: start;
+	box-pack: start;
+}
+ 
+.end {
+	-webkit-box-pack: end;
+	-moz-box-pack: end;
+	box-pack: end;
+}
+ 
+.center {
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+}
+/* END hbox/vbox normalization from http://alex.dojotoolkit.org/2009/08/css-3-progress/ */

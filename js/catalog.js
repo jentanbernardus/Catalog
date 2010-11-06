@@ -11,15 +11,17 @@ jQuery(document).ready(function($) {
     }, i*100);
   });
   /*
-    Sidebar toggle
+    Hide the Secondary Menu 
   */
-  $("#sidebarToggle a.toggle").bind("click", function() {
-    $(this).parent().parent().slideToggle(200); 
-    $(this).parent().parent().next().slideToggle(200);
+  $("#secondaryMenu").hide();
+  /*
+    Secondary Menu toggle
+  */
+  $("#secondaryMenuToggle a.toggle").bind("click", function() {
+    $(this).parent().parent().next().slideToggle(200); 
   });
-  $("#sidebar li a").bind("click", function() {
-    $(this).parent().parent().parent().parent().slideToggle(200); 
-    $(this).parent().parent().parent().parent().prev().slideToggle(200);
+  $("#secondaryMenu nav div ul li a").bind("click", function() {
+    $(this).parent().parent().parent().parent().parent().slideToggle(200); 
   });
   /*
     Keyboard shortcuts
@@ -34,14 +36,15 @@ jQuery(document).ready(function($) {
     else if (event.keyCode == 71) {
       $('.grid').click();
     }
-    else if (event.keyCode == 83) {
-      $('#sidebarToggle a.toggle').click();
+    else if (event.keyCode == 84) {
+      $('#secondaryMenuToggle a.toggle').click();
     }
   });
   /*
-    Hide the sidebar 
+    Create inactive nav links if empty
   */
-  $("#sidebar").hide();
+  $(".postNav .nextPage:empty").html("<span class='inactive'>Next</span>"); 
+  $(".postNav .previousPage:empty").html("<span class='inactive'>Prev</span>");  
   /*
     We insert footer info here to make it harder to delete because I'm annoying
   */

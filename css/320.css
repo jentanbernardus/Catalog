@@ -72,15 +72,22 @@ body section.pagePost.page .gallery img {
   max-width: 300px;
 }
 
-body section#sidebar nav ul li {
+body section#secondaryMenu nav ul li {
   margin: 0;
   border-bottom: 1px solid #e6e6e6;
   padding: 5px 10px;
   width: 320px;  
 }
 
-body section#sidebar nav ul li:last-child {
+body section#secondaryMenu nav ul li:last-child {
   border-bottom: none; 
+}
+
+body section#sidebar .widget {
+    width: 300px;
+    display: inline-block;
+    float: left;
+    margin: 10px;
 }
 
 body footer {

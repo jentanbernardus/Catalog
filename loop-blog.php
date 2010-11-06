@@ -15,7 +15,13 @@ while ( $posts->have_posts() ) {
 }
 
 /*
+    Grab sidebar
+*/
+get_sidebar();
+
+/*
     See: lib/helpers.php -> catalog_pagination()
 */
 catalog_pagination();
+
 ?>

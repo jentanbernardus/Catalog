@@ -4,11 +4,6 @@
      Create page specific loops: `loop-<template name>.php`
 */
 
-/*
-    See: lib/helpers.php -> catalog_pagination()
-*/
-catalog_pagination();
-
 while ( have_posts() ) {
     the_post();
     
@@ -18,5 +13,12 @@ while ( have_posts() ) {
     */
     get_template_part('content', $GLOBALS['template_part_name']);
 }
+
+/*
+    See: lib/helpers.php -> catalog_pagination()
+
+catalog_pagination();
+
+*/
 
 ?>

@@ -18,6 +18,7 @@ body section#content .navigation {
 body section.pagePost.post .infoWrap,
 body section.pagePost.page .infoWrap {
   width: 640px;
+  padding: 0 0 10px 0;
 }
 
 body section.pagePost.post .infoWrap span, 

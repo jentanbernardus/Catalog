@@ -1,3 +1,16 @@
+<section id="secondaryMenuToggle" class="fade">
+    <div class="padding">
+        <a class="toggle" href="#"><span style="text-decoration:underline;">t</span>oggle projects</a>
+        <?php catalog_pagination(); ?>
+    </div>
+</section>
+
+<section id="secondaryMenu">
+    <nav class="clearfix">
+        <?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
+    </nav>
+</section>
+
 <section id="page-<?php the_ID() ?>" class="pagePost page clearfix">
     <div class="infoWrap clearfix fade">
         <div class="entryTitle">
