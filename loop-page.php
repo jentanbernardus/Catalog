@@ -1,6 +1,6 @@
 <?php
 /*
-    Default post loop.
+    Page loop.
      Create page specific loops: `loop-<template name>.php`
 */
 
