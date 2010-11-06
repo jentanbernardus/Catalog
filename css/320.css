@@ -19,9 +19,8 @@ body header nav ul {
   text-align: left;
 }
 
-body section#content .navigation.postNav {
+body section#content .navigation {
   width: 300px;
-  text-align: right;
 }
 
 body section.pagePost .meta .wordCount,
@@ -73,14 +72,14 @@ body section.pagePost.page .gallery img {
   max-width: 300px;
 }
 
-body section#sidebar ul li {
+body section#sidebar nav ul li {
   margin: 0;
   border-bottom: 1px solid #e6e6e6;
   padding: 5px 10px;
   width: 320px;  
 }
 
-body section#sidebar ul li:last-child {
+body section#sidebar nav ul li:last-child {
   border-bottom: none; 
 }
 

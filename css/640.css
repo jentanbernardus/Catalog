@@ -11,7 +11,7 @@ body header nav {
   width: 460px;
 }
 
-body section#content .navigation.postNav {
+body section#content .navigation {
   width: 620px;
 }
 
@@ -50,19 +50,6 @@ body section.pagePost.page .gallery {
 
 body section.pagePost.page .gallery img {
   max-width: 620px;
-}
-
-body section#sidebarToggle .padding .navigation {
-  width: 140px;
-  text-align: right;
-}
-
-body section#sidebarToggle .padding .navigation .nextPage {
-  padding: 0 0 0 10px;
-}
-
-body section#sidebarToggle .padding .navigation .previousPage a {
-  padding: 0;
 }
 
 body footer {

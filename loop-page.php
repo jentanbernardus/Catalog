@@ -4,11 +4,6 @@
      Create page specific loops: `loop-<template name>.php`
 */
 
-/*
-    See: lib/helpers.php -> catalog_pagination()
-*/
-catalog_pagination();
-
 while ( have_posts() ) {
     the_post();
     

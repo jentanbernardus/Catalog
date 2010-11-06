@@ -4,6 +4,7 @@
             <h2 class="title"><?php the_title() ?></h2>
         </div>
     </div>
+    
     <div class="entry fade">
         <?php the_content(); ?>
     </div>

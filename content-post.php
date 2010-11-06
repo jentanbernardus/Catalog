@@ -9,9 +9,9 @@
         <?php the_time( get_option( 'date_format' ) ); ?>
         </abbr>
 
-        <span class="wordCount"><?php echo word_count(); ?> words</span>
         <span class="categories">posted in <?php the_category(', ') ?></span>
         <span class="comments"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span>
+        <span class="wordCount"><?php echo word_count(); ?> words</span>
     </div>
     
     <div class="entry fade">
@@ -19,5 +19,3 @@
     </div>
 
 </section>
-
-<?php comments_template('', true); ?>
