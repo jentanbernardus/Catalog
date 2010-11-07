@@ -15,7 +15,7 @@ body section#content .navigation {
   width: 620px;
 }
 
-body section.pagePost {
+body section.pagePost.index {
     width: 480px;
 }    
 

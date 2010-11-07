@@ -23,7 +23,7 @@ body section#content .navigation {
   width: 300px;
 }
 
-body section.pagePost {
+body section.pagePost.index {
     width: 320px;
 }  
 

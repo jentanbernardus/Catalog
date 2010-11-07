@@ -300,7 +300,7 @@ section#content ul.index li.project .brief a:hover {
 section.pagePost {
   padding: 10px 0;
   display: block;
-  width: 800px;
+  width: 100%;
   float: left;
 }
 
@@ -373,6 +373,7 @@ section.pagePost .entry a:hover {
 /* === BLOG INDEX SPECIFIC === */
 section.pagePost.index {
   padding: 10px 0 0;
+  width: 800px;
 }
 
 section.pagePost.index h2.indexTitle {
