@@ -279,8 +279,8 @@ endif;
 if ( ! function_exists('catalog_search_form') ) :
 function catalog_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" action="' . trailingslashit(get_bloginfo('url')) . '">';
-    $form .= '<div class="clearfix searchContainer hbox">';
-    $form .= '<input type="text" name="s" id="s" class="left boxFlex" placeholder="Search" value="' . get_search_query() . '" />';
+    $form .= '<div class="clearfix searchContainer">';
+    $form .= '<input type="text" name="s" id="s" class="left" placeholder="Search" value="' . get_search_query() . '" />';
     $form .= '<input type="submit" name="searchsubmit" id="searchsubmit" class="left" value="&rarr;" />';
     $form .= '</div>';
     $form .= '</form>'; 

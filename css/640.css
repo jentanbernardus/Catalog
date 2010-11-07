@@ -15,6 +15,14 @@ body section#content .navigation {
   width: 620px;
 }
 
+body section.pagePost {
+    width: 480px;
+}    
+
+body section.pagePost .meta .wordCount {
+    display: none;
+}
+
 body section.pagePost.post .infoWrap,
 body section.pagePost.page .infoWrap {
   width: 640px;
@@ -28,7 +36,8 @@ body section.pagePost.post .infoWrap abbr {
   float: left;
 }
 
-body section.pagePost.post .infoWrap span.categories {
+body section.pagePost.post .infoWrap span.categories,
+body section.pagePost .meta .categories {
   width: 140px;
 }
 

@@ -9,11 +9,11 @@
     ?>
     </a>
     
-    <h3><a href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>" rel="bookmark" class="block"><?php the_title(); ?></a></h3>
+    <h3><a href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>" rel="bookmark" class="block overflow"><?php the_title(); ?></a></h3>
 
-    <span class="brief">
-        <span class="category"><?php the_category(' / ') ?></span>,
-        <span class="year"><?php echo get_the_date('Y') ?></span>
-    </span>
+    <div class="brief overflow">
+        <?php the_category(' / ') ?>,
+        <?php echo get_the_date('Y') ?>
+    </div>
 
 </li>

@@ -23,6 +23,10 @@ body section#content .navigation {
   width: 300px;
 }
 
+body section.pagePost {
+    width: 320px;
+}  
+
 body section.pagePost .meta .wordCount,
 body section.pagePost .meta .categories {
   display: none;
@@ -83,11 +87,17 @@ body section#secondaryMenu nav ul li:last-child {
   border-bottom: none; 
 }
 
+body section#sidebar {
+    margin: 50px 0 0;
+    width: 320px;
+}
+
 body section#sidebar .widget {
     width: 300px;
-    display: inline-block;
-    float: left;
-    margin: 10px;
+}
+
+body form#searchform input#s {
+    width: 276px;
 }
 
 body footer {
