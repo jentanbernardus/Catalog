@@ -18,7 +18,6 @@ while ( have_posts() ) {
     See: lib/helpers.php -> catalog_pagination()
 
 catalog_pagination();
-
 */
 
 ?>

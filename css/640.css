@@ -1,67 +1,110 @@
 body #gridOverlay {
-  width: 640px;
-  margin-left: -320px;
+    width: 640px;
+    margin-left: -320px;
 }
 
 body #wrapper {
-  width: 640px;
+    width: 640px;
 }
 
 body header nav {
-  width: 460px;
+    width: 460px;
 }
 
 body section#content .navigation {
-  width: 620px;
+    width: 620px;
 }
+/*
+    blog index
+*/
+body section.pagePost.blog.index {
+    padding: 0 0 10px 0;
+    width: 640px;
+}  
 
-body section.pagePost.index {
-    width: 480px;
-}    
-
-body section.pagePost .meta .wordCount {
-    display: none;
-}
-
-body section.pagePost.post .infoWrap,
+/*
+    blog posts
+*/
 body section.pagePost.page .infoWrap {
-  width: 640px;
-  padding: 0 0 10px 0;
+    width: 640px;
+    padding: 0 0 10px 0;
 }
 
 body section.pagePost.post .infoWrap span, 
 body section.pagePost.post .infoWrap abbr {
-  display: inline-block;
-  width: 140px;
-  float: left;
+    display: inline-block;
+    width: 140px;
+    float: left;
 }
 
-body section.pagePost.post .infoWrap span.categories,
-body section.pagePost .meta .categories {
-  width: 140px;
+body section.pagePost.post .infoWrap span.categories {
+    width: 140px;
 }
 
 body section.pagePost.post .infoWrap .entryTitle h2 {
-  padding: 0;
+    padding: 0;
 }
 
+body section.pagePost.post .entry {
+    width: 460px;
+}
+
+body section.pagePost.post .entry p,
+body section.pagePost.post .entry h2,
+body section.pagePost.post .entry h3,
+body section.pagePost.post .entry ol,
+body section.pagePost.post .entry ul {
+    padding: 0;
+}
+
+body section.pagePost.post .entry blockquote {
+    padding: 0 0 0 24px;
+}
+
+/*
+    project/pages
+*/
 body section.pagePost.page .entry {
-  -moz-column-count: 2;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 20px;
-  width: 620px;
-  float: left;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    -o-column-count: 2;
+    -o-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+    width: 620px;
+    float: left;
 }
 
 body section.pagePost.page .gallery {
-  width: 640px;
+    width: 640px;
 }
 
 body section.pagePost.page .gallery img {
-  max-width: 620px;
+    max-width: 620px;
+}
+
+/*
+    sidebar
+*/
+body section#sidebar {
+    width: 640px;
+    padding: 0;
+    margin: 50px 0 0;
+}
+
+body section#sidebar .widget {
+    width: 140px;
+}
+
+/*
+    search
+*/
+body form#searchform input#s {
+    width: 116px;
 }
 
 body footer {
-  width: 640px;
+    width: 640px;
 }

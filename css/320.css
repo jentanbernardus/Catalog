@@ -1,94 +1,112 @@
 body #gridOverlay {
-  width: 320px;
-  margin-left: -160px;
+    width: 320px;
+    margin-left: -160px;
 }
 
 body #wrapper {
-  width: 320px;
+    width: 320px;
 }
 
 body header {
-  padding: 20px 0 0;
+    padding: 20px 0 0;
 }
 
 body header nav {
-  width: 300px;
+    width: 300px;
 }
 
 body header nav ul {
-  text-align: left;
+    text-align: left;
 }
 
 body section#content .navigation {
-  width: 300px;
+    width: 300px;
+}
+/*
+    blog index specific
+*/
+body section.pagePost.blog.index {
+    width: 320px;
 }
 
-body section.pagePost.index {
+body section.pagePost.blog.index .indexContent {
+    display: none;
+}
+
+body section.pagePost .meta .comments {
+    text-align: right;
+} 
+
+/*
+    blog post specific
+*/
+body section.pagePost.blog {
     width: 320px;
 }  
 
-body section.pagePost .meta .wordCount,
 body section.pagePost .meta .categories {
-  display: none;
+    display: none;
 }
 
 body section.pagePost.post .infoWrap,
 body section.pagePost.page .infoWrap {
-  width: 320px;
+    width: 320px;
 }
 
 body section.pagePost.post .infoWrap span.categories,
 body section.pagePost.post .infoWrap span.wordCount {
-  display: none;
+    display: none;
 }
 
 body section.pagePost.post .infoWrap span.comments {
-  text-align: right;
-}
-
-body section.pagePost.post .entry p,
-body section.pagePost.post .entry h2,
-body section.pagePost.post .entry h3 {
-  padding: 0;
+    text-align: right;
 }
 
 body section.pagePost.post .entry p img {
-  margin: 0;
-  max-width: 300px;
+    margin: 0;
+    max-width: 300px;
+    height: auto;
 }
 
 body section.pagePost.post .entry {
-  width: 300px;
+    width: 300px;
 }
 
+/*
+    page specific
+*/
 body section.pagePost.page .entry {
-  -moz-column-count: 1;
-  -webkit-column-count: 1;
-  width: 300px;
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1;
+    width: 300px;
 }
 
 body section.pagePost.page .gallery {
-  width: 320px;
+    width: 320px;
 }
 
 
 body section.pagePost.page .gallery img {
-  max-width: 300px;
+    max-width: 300px;
 }
 
 body section#secondaryMenu nav ul li {
-  margin: 0;
-  border-bottom: 1px solid #e6e6e6;
-  padding: 5px 10px;
-  width: 320px;  
+    margin: 0;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 5px 10px;
+    width: 320px;  
 }
 
 body section#secondaryMenu nav ul li:last-child {
-  border-bottom: none; 
+    border-bottom: none; 
 }
 
+/*
+    sidebar
+*/
 body section#sidebar {
-    margin: 50px 0 0;
     width: 320px;
 }
 
@@ -100,6 +118,9 @@ body form#searchform input#s {
     width: 276px;
 }
 
+/*
+    footer
+*/
 body footer {
-  width: 320px;
+    width: 320px;
 }

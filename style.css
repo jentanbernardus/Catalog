@@ -1,18 +1,20 @@
 /*  
-Theme Name: Catalog
-Theme URI: http://
-Description: A theme for artists and designers
-Author: Andy Chung / Adrian Unger
-Author URI: http://andychung.ca / http://staydecent.com
-Version: 1.0
-Tags: Responsive, Design, Art, Portfolio
+    Theme Name: Catalog
+    Theme URI: http://
+    Description: A theme for artists and designers
+    Author: Andy Chung / Adrian Unger
+    Author URI: http://andychung.ca / http://staydecent.com
+    Version: 1.0
+    Tags: Responsive, Design, Art, Portfolio
 */
 
 @import url("css/640.css") screen and (max-width: 960px);
 @import url("css/320.css") screen and (max-width: 640px);
 
 
-/* === GENERAL === */
+/*
+    general
+*/
 * {
     margin: 0;
     padding: 0;
@@ -136,13 +138,6 @@ p:last-child {
     background-repeat: no-repeat;
 }
 
-.overflow {
-    -o-text-overflow: ellipsis; 
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
 #wrapper {
     margin: 0 auto;
     width: 960px;
@@ -154,7 +149,9 @@ p:last-child {
     padding-bottom: 82px;
 }
 
-/* === HEADER === */
+/*
+    header
+*/
 header {
     padding: 20px 0;
     width: 100%;
@@ -195,32 +192,37 @@ header nav ul li {
 }
 
 header nav ul li:first-child {
-  padding: 0;
+    padding: 0;
 }
 
 header nav ul li.current_page_item a,
 header nav ul li.current-page-ancestor a,
 header nav ul li.current_page_parent a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* === CONTAINERS === */
+/*
+    containers
+*/
 section#container {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
 section#content {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
-/* === NAVIGATION === */
+/*
+    navigation styles
+*/
 section#content .navigation {
-  padding: 10px 0;
-  margin: 0 10px;
-  display: block;
-  width: 940px;
+    padding: 10px 0;
+    margin: 0 10px;
+    display: block;
+    width: 300px;
+    float: left;
 }
 
 section#content .navigation .nextPage,
@@ -234,114 +236,119 @@ section#content .navigation .nextPage {
 
 section#content .navigation .nextPage span.inactive,
 section#content .navigation .previousPage span.inactive {
-    color: #ccc;
+    color: #e6e6e6;
 }
 
 section#content .navigation a {
-  color: #000;
+    color: #000;
 }
 
 section#content .navigation a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 section#content .navigation .alignRight,
 section#content .navigation .alignLeft {
-  display: inline-block;
-  text-align: right;
+    display: inline-block;
+    text-align: right;
 }
 
 section#content .navigation .alignLeft {
-  float: left;
+    float: left;
 }
 
-/* === INDEX PAGE === */
+/*
+    project index specific styles
+*/
 section#content ul.index li.project {
-  margin: 20px 10px;
-  text-align: center;
+    margin: 20px 10px;
+    text-align: center;
 }
 
 section#content ul.index li.project h3 {
-  color: 000;
-  font-size: 12px;
-  font-weight: normal;
-  display: inline;
+    color: 000;
+    font-size: 12px;
+    font-weight: normal;
+    display: inline;
 }
 
 section#content ul.index li.project:hover h3 a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 section#content ul.index li.project a img {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 
 section#content ul.index li.project a {
-  color: #000;
+    color: #000;
 }
 
 section#content ul.index li.project a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-section#content ul.index li.project .brief,section#content ul.index li.project .brief a {
-  font-style: italic;
-  color: #aaa;
-  font-size: 11px;
+section#content ul.index li.project .brief,
+section#content ul.index li.project .brief a {
+    font-style: italic;
+    color: #aaa;
+    font-size: 11px;
 }
 
 section#content ul.index li.project .brief a:hover {
-  color:#333;
+    color:#333;
 }
 
-/* === POSTS & PAGES === */
+/*
+    universal styles for posts/pages/projects
+*/
 
 section.pagePost {
-  padding: 10px 0;
-  display: block;
-  width: 100%;
-  float: left;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    float: left;
 }
 
 section.pagePost h2 {
-  font-size: 12px;
-  display: block;
-  color: #000;
+    font-size: 12px;
+    display: block;
+    color: #000;
 }
 
 section.pagePost h2.indexTitle {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
 section.pagePost h2.indexTitle a:hover {
-  text-decoration: underline;
-  color: 000;
+    text-decoration: underline;
+    color: 000;
 }
 
 section.pagePost a {
-  color: #000;
+    color: #000;
 } 
 
 section.pagePost abbr {
-  border: none;
+    border: none;
 }
 
 section.pagePost .meta {
-  color: #000;
-  width: 100%;
+    color: #aaa;
+    width: 100%;
 }
 
 section.pagePost .meta a,
 section.pagePost.post .infoWrap a {
-  color: #000;
-  text-decoration: underline;
+    color: #aaa;
+    text-decoration: underline;
 }
 
 section.pagePost .meta a:hover,
 section.pagePost.post .infoWrap a:hover,
 footer a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 section.pagePost .meta abbr.published,
@@ -359,89 +366,142 @@ section.pagePost .meta .categories {
 }
 
 section.pagePost .meta .comments {
-  text-align: right;
+    text-align: right;
 }
 
 section.pagePost .entry a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 section.pagePost .entry a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-/* === BLOG INDEX SPECIFIC === */
-section.pagePost.index {
-  padding: 10px 0 0;
-  width: 800px;
+section.pagePost .entry h2 {
+    margin: 0 0 21px 0;
 }
 
-section.pagePost.index h2.indexTitle {
-  padding: 10px 0 0;
-  border-top: 1px solid #000;
+section.pagePost .entry h2 {
+    font-weight: normal;
+    font-size: 16px;
+    color: #000;
 }
 
-section.pagePost.index:first-child h2.indexTitle {
-  border-top: none;
+section.pagePost .entry ol,
+section.pagePost .entry ul,
+section.pagePost .entry blockquote {
+    margin: 0 0 21px 0;
 }
 
-/* === POST SPECIFIC === */
+section.pagePost .entry ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+section.pagePost .entry ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+section.pagePost .entry blockquote {
+    padding: 0 160px 0 24px;
+    border-left: 1px solid #000;
+    font-style: italic;
+}
+
+section.pagePost .entry h3 {
+    margin: 0 0 7px 0;
+    font-size: 12px;
+}
+
+/*
+    Blog index
+*/
+section.pagePost.blog.index {
+    padding: 0 0 10px 0;
+    width: 640px;
+    float: right;
+}
+
+section.pagePost.blog.index h2.indexTitle {
+    padding: 10px 0 0;
+    border-top: 1px solid #e6e6e6;
+}
+
+section.pagePost.blog.index:first-child h2.indexTitle {
+    border-top: none;
+}
+
+/*
+    post specific
+*/
+section.pagePost.blog {
+    padding: 0;
+    width: 640px;
+    float: right;
+}
+
 section.pagePost.post .infoWrap {
-  width: 320px;
-  float: left;
-  padding: 10px 0;
-  display: inline-block;
+    width: 640px;
+    float: left;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+section.pagePost.post .infoWrap a,
+section.pagePost.post .infoWrapFooter a {
+    color: #aaa;
 }
 
 section.pagePost.post .infoWrap span, 
 section.pagePost.post .infoWrap abbr,
 section.pagePost.post .infoWrap .entryTitle {
-  display: block;
-  margin: 0 10px;
+    display: block;
+    margin: 0 10px;
+    color: #aaa;
 }
 
 section.pagePost.post .infoWrap span, 
 section.pagePost.post .infoWrap abbr {
-  width: 300px;
+    width: 140px;
+    display: inline-block;
+    float: left;
+}
+
+section.pagePost.post .infoWrapFooter {
+    color: #aaa;
+    clear: both;
+    display: block;
+    margin: 0 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 section.pagePost.post .entry {
-  width: 620px;
-  display: inline-block;
-  float: right;
-  margin: 0 10px;
-  padding: 10px 0;
+    width: 620px;
+    display: inline-block;
+    float: left;
+    margin: 0 10px;
+    padding: 10px 0;
 }
 
 section.pagePost.post .entry p,
 section.pagePost.post .entry h2,
-section.pagePost.post .entry h3 {
-  padding: 0 160px 0 0;
-  overflow: auto;
+section.pagePost.post .entry h3,
+section.pagePost.post .entry ol,
+section.pagePost.post .entry ul,
+section.pagePost.post .entry blockquote {
+    overflow: visible;
+    padding: 0 160px 0 0;
 }
 
-section.pagePost.post .entry h2 {
-  margin: 0 0 21px 0;
+section.pagePost.post .entry blockquote {
+    padding: 0 160px 0 24px;
 }
 
-section.pagePost.post .entry h2 {
-  font-weight: normal;
-  font-size: 16px;
-  color: #000;
-}
-
-section.pagePost.post .entry h3 {
-  margin: 0 0 7px 0;
-  font-size: 12px;
-}
-
-section.pagePost.post .entry p img {
-  max-width: 620px;
-  float: left;
-  height: auto;
-}
-
-/* === SECONDARY MENU === */
+/*
+    secondary menu
+*/
 section#secondaryMenuToggle { 
     display: block; 
 }
@@ -451,7 +511,7 @@ section#secondaryMenuToggle .padding {
 }
 
 section#secondaryMenuToggle .padding a {
-      color: #000;
+    color: #000;
 }
 
 section#content section#secondaryMenuToggle .padding .navigation.postNav {
@@ -464,108 +524,114 @@ section#content section#secondaryMenuToggle .padding .navigation.postNav {
 }
 
 section#secondaryMenu {
-  display: block;
+    display: block;
 }
 
 section#secondaryMenu nav {
-  padding: 10px 0;
-  display: block;
+    padding: 10px 0;
+    display: block;
 }
 
 section#secondaryMenu a {
-  color: #000;
+    color: #000;
 }
 
 section#secondaryMenu ul {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
 section#secondaryMenu ul li {
-  margin: 0 10px;
-  min-height: 1px;
-  float: left;
-  display: inline-block;
-  width: 140px;  
+    margin: 0 10px;
+    min-height: 1px;
+    float: left;
+    display: inline-block;
+    width: 140px; 
 }
 
 section#secondaryMenu a:hover,
 section#secondaryMenu ul li.current-menu-item a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* === PAGE SPECIFIC === */
+/*
+    page specific styles
+*/
 section.pagePost.page .infoWrap {
-  width: 320px;
-  float: right;
-  padding: 10px 0;
+    width: 320px;
+    float: right;
+    padding: 10px 0;
 }
 
 section.pagePost.page .infoWrap .entryTitle {
-  display: block;
-  margin: 0 10px;
+    display: block;
+    margin: 0 10px;
 }
 
 section.pagePost.page .infoWrap .pageMeta {
-  display: block;
-  font-style: italic;
-  margin: 0 10px;
+    display: block;
+    font-style: italic;
+    margin: 0 10px;
 }
 
 section.pagePost.page .entry {
-  margin: 0 10px;
-  padding: 10px 0;
-  width: 300px;
-  float: right;
-  display: inline-block;
+    margin: 0 10px;
+    padding: 10px 0;
+    width: 300px;
+    float: right;
+    display: inline-block;
 }
 
 section.pagePost.page .gallery {
-  width: 640px;
-  float: left;
-  display: inline-block;
-  position: relative;
-  color: #888;
-  font-style: italic;
+    width: 640px;
+    float: left;
+    display: inline-block;
+    position: relative;
+    color: #888;
+    font-style: italic;
 }
 
 section.pagePost.page .gallery p {
-  margin: 0;
+    margin: 0;
 }
 
 section.pagePost.page .gallery img {
-  max-width: 620px;
-  margin: 10px;
-  display: inline-block;
-  float: left;
-  height: auto;
+    max-width: 620px;
+    margin: 10px;
+    display: inline-block;
+    float: left;
+    height: auto;
 }
 
 section.pagePost.page .gallery img.shadow {
-  -moz-box-shadow: 0 5px 15px #888;
-  -webkit-box-shadow: 0 5px 15px #888;
-  -o-box-shadow: 0 5px 15px #888;
-  box-shadow: 0 5px 15px #888;
+    -moz-box-shadow: 0 5px 15px #888;
+    -webkit-box-shadow: 0 5px 15px #888;
+    -o-box-shadow: 0 5px 15px #888;
+    box-shadow: 0 5px 15px #888;
 }
 
-/* === ARCHIVES === */
+/*
+    archives
+*/
 .archiveTitle {
-  display: block;
-  margin: 0 10px;
-  padding: 10px 0;
+    display: block;
+    margin: 0 10px;
+    padding: 10px 0;
 }
 
 .archiveTitle h2 {
-  font-size: 12px;
-  display: block;
-  text-align: center;
+    font-size: 12px;
+    display: block;
+    text-align: center;
 }
 
-/* === SIDEBAR === */
+/*
+    sidebar styles
+*/
 section#sidebar {
-    padding: 10px 0;
+    padding: 0 160px 0 0;
     display: inline-block;
-    width: 160px;
+    width: 320px;
 }
 
 section#sidebar .widget {
@@ -577,7 +643,8 @@ section#sidebar .widget {
 
 section#sidebar .widget h3 {
     font-size: 12px;
-    padding: 0 0 7px 0;
+    color: #aaa;
+    font-weight: normal;
 }
 
 section#sidebar .widget select,
@@ -585,7 +652,9 @@ section#sidebar .widget table {
     width: 100%;
 }
 
-/* === SEARCH === */
+/*
+    search widget
+*/
 form#searchform {
     width: 100%;
 }
@@ -629,143 +698,45 @@ form#searchform input#searchsubmit:active {
     -moz-box-shadow: 0 0 2px rgba(0,0,0,0.5) inset;
 }    
 
-/* === FOOTER === */
+/*
+    footer
+*/
 footer {
-  width: 960px;
-  display: block;
-  padding: 20px 10px;
-  color: #000;
-  position: relative;
-  z-index: 100;
-  margin: -82px auto 0;
-  clear: both;
+    width: 960px;
+    display: block;
+    padding: 20px 10px;
+    color: #aaa;
+    position: relative;
+    z-index: 100;
+    margin: -82px auto 0;
+    clear: both;
+    text-align: right;
 }
 
 footer a {
-  color: #000;
+    color: #aaa;
 }
 
-/* === CLEARFIX === */
+/*
+    clearfix 
+*/
 
+p:after,
 .clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
- 
-html[xmlns] .clearfix {
-  display: block;
-}
- 
-* html .clearfix {
-  height: 1%;
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
 }
 
-/* START hbox/vbox normalization from http://alex.dojotoolkit.org/2009/08/css-3-progress/ */
-/* hbox and vbox classes */
- 
-.hbox {
-	display: -webkit-box;
-	-webkit-box-orient: horizontal;
-	-webkit-box-align: stretch;
- 
-	display: -moz-box;
-	-moz-box-orient: horizontal;
-	-moz-box-align: stretch;
- 
-	display: box;
-	box-orient: horizontal;
-	box-align: stretch;
+html[xmlns] p, 
+html[xmlns] .clearfix {
+    display: block;
 }
- 
-.hbox > * {
-	-webkit-box-flex: 0;
-	-moz-box-flex: 0;
-	box-flex: 0;
-	display: block;
+
+* html p,
+* html .clearfix {
+    height: 1%;
 }
- 
-.vbox {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-box-align: stretch;
- 
-	display: -moz-box;
-	-moz-box-orient: vertical;
-	-moz-box-align: stretch;
- 
-	display: box;
-	box-orient: vertical;
-	box-align: stretch;
-}
- 
-.vbox > * {
-	-webkit-box-flex: 0;
-	-moz-box-flex: 0;
-	box-flex: 0;
-	display: block;
-}
- 
-.spacer {
-	-webkit-box-flex: 1;
-	-moz-box-flex: 1;
-	box-flex: 1;
-}
- 
-.reverse {
-	-webkit-box-direction: reverse;
-	-moz-box-direction: reverse;
-	box-direction: reverse;
-}
- 
-.boxFlex0 {
-	-webkit-box-flex: 0;
-	-moz-box-flex: 0;
-	box-flex: 0;
-}
- 
-.boxFlex1, .boxFlex {
-	-webkit-box-flex: 1;
-	-moz-box-flex: 1;
-	box-flex: 1;
-}
- 
-.boxFlex2 {
-	-webkit-box-flex: 2;
-	-moz-box-flex: 2;
-	box-flex: 2;
-}
- 
-.boxGroup1 {
-	-webkit-box-flex-group: 1;
-	-moz-box-flex-group: 1;
-	box-flex-group: 1;
-}
- 
-.boxGroup2 {
-	-webkit-box-flex-group: 2;
-	-moz-box-flex-group: 2;
-	box-flex-group: 2;
-}
- 
-.start {
-	-webkit-box-pack: start;
-	-moz-box-pack: start;
-	box-pack: start;
-}
- 
-.end {
-	-webkit-box-pack: end;
-	-moz-box-pack: end;
-	box-pack: end;
-}
- 
-.center {
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	box-pack: center;
-}
-/* END hbox/vbox normalization from http://alex.dojotoolkit.org/2009/08/css-3-progress/ */

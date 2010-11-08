@@ -1,21 +1,27 @@
-<section id="post-<?php the_ID() ?>" class="pagePost post clearfix">
+<?php catalog_pagination(); ?>
+<section id="post-<?php the_ID() ?>" class="pagePost post blog clearfix">
 
     <div class="infoWrap clearfix fade">
         <div class="entryTitle">
-            <h2 class="title"><?php the_title() ?></h2>
+            <h2 class="title overflow"><?php the_title() ?></h2>
         </div>
 
         <abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>">
         <?php the_time( get_option( 'date_format' ) ); ?>
         </abbr>
-
-        <span class="categories">posted in <?php the_category(', ') ?></span>
-        <span class="comments"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span>
-        <span class="wordCount"><?php echo word_count(); ?> words</span>
     </div>
     
     <div class="entry fade">
         <?php the_content(); ?>
     </div>
-
+    
+    <div class="infoWrapFooter clearfix fade">
+        <span class="categories overflow">posted in <?php the_category(', ') ?></span>
+    </div>
+    
+    <div class="comments">
+        <?php get_comments(); ?>
+    </div>
+    
 </section>
+<?php get_sidebar(); ?>

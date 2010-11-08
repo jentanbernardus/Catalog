@@ -5,7 +5,7 @@
         if ( has_post_thumbnail() ) 
             the_post_thumbnail();
         else
-            echo '<img src="<?php get_bloginfo(\'stylesheet_directory\') ?>/i/nothumb.gif" alt="<?php the_title() ?> has no thumbnail.">';
+            echo '<img src="<?php get_bloginfo(\'stylesheet_directory\') ?>/i/nothumb.png" alt="<?php the_title() ?> has no thumbnail.">';
     ?>
     </a>
     

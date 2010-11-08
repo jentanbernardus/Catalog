@@ -267,7 +267,7 @@ endif;
 */
 if ( ! function_exists( 'catalog_excerpt_length' ) ) :
 function catalog_excerpt_length( $length ) {
-    return 55;
+    return 25;
 }
 add_filter( 'excerpt_length', 'catalog_excerpt_length' );
 endif;

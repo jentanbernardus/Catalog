@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
   });
   $("#secondaryMenu nav div ul li a").bind("click", function() {
     $(this).parent().parent().parent().parent().parent().slideToggle(200); 
-  });
+  }); 
   /*
     Keyboard shortcuts
   */
