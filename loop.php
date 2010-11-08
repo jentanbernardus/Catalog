@@ -14,10 +14,4 @@ while ( have_posts() ) {
     get_template_part('content', $GLOBALS['template_part_name']);
 }
 
-/*
-    See: lib/helpers.php -> catalog_pagination()
-
-catalog_pagination();
-*/
-
 ?>

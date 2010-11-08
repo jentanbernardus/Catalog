@@ -20,7 +20,7 @@
     </div>
     
     <div class="comments">
-        <?php get_comments(); ?>
+        <?php comments_template(); ?>
     </div>
     
 </section>
