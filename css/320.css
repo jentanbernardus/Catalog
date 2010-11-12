@@ -25,17 +25,9 @@ body section#content .navigation {
 /*
     blog index specific
 */
-body section.pagePost.blog.index {
-    width: 320px;
-}
-
 body section.pagePost.blog.index .indexContent {
     display: none;
 }
-
-body section.pagePost .meta .comments {
-    text-align: right;
-} 
 
 /*
     blog post specific

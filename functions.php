@@ -205,6 +205,7 @@ function catalog_setup() {
     add_image_size('640-image', 640, 480, false);
     add_image_size('320-image', 320, 200, false);
     add_image_size('square-thumbnail', 50, 50, true);
+    add_image_size('blog-thumbnail', 300, 200, true); // Blog post thumbnails
 }
 add_action( 'after_setup_theme', 'catalog_setup' );
 endif;
@@ -246,7 +247,7 @@ endif;
 */
 if ( ! function_exists( 'catalog_excerpt_more' ) ) :
 function catalog_excerpt_more( $post_excerpt ) {
-    return $post_excerpt.' <a href="'.get_permalink().'" class="more">'. __( 'Read More &raquo;', 'catalog' ).'</a>';
+    return $post_excerpt.' <a href="'.get_permalink().'" class="more">'. __( '(read more)', 'catalog' ).'</a>';
 }
 add_filter('wp_trim_excerpt', 'catalog_excerpt_more');
 endif;
@@ -267,7 +268,7 @@ endif;
 */
 if ( ! function_exists( 'catalog_excerpt_length' ) ) :
 function catalog_excerpt_length( $length ) {
-    return 25;
+    return 50;
 }
 add_filter( 'excerpt_length', 'catalog_excerpt_length' );
 endif;
@@ -281,7 +282,7 @@ function catalog_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" action="' . trailingslashit(get_bloginfo('url')) . '">';
     $form .= '<div class="clearfix searchContainer">';
     $form .= '<input type="text" name="s" id="s" class="left" placeholder="Search" value="' . get_search_query() . '" />';
-    $form .= '<input type="submit" name="searchsubmit" id="searchsubmit" class="left" value="&rarr;" />';
+    $form .= '<input type="submit" name="searchsubmit" id="searchsubmit" class="left" value="" />';
     $form .= '</div>';
     $form .= '</form>'; 
 

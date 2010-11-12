@@ -237,7 +237,7 @@ section#content .navigation .nextPage {
 
 section#content .navigation .nextPage span.inactive,
 section#content .navigation .previousPage span.inactive {
-    color: #e6e6e6;
+    color: #aaa;
 }
 
 section#content .navigation a {
@@ -338,6 +338,7 @@ section.pagePost abbr {
 section.pagePost .meta {
     color: #aaa;
     width: 100%;
+    font-size: 11px;
 }
 
 section.pagePost .meta a,
@@ -364,10 +365,6 @@ section.pagePost .meta .comments {
 
 section.pagePost .meta .categories {
     width: 300px;
-}
-
-section.pagePost .meta .comments {
-    text-align: right;
 }
 
 section.pagePost .entry a {
@@ -419,19 +416,53 @@ section.pagePost .entry h3 {
     Blog index
 */
 section.pagePost.blog.index {
-    padding: 0 0 10px 0;
-    width: 640px;
-    float: right;
-}
-
-section.pagePost.blog.index h2.indexTitle {
-    padding: 10px 0 0;
-    border-top: 1px solid #e6e6e6;
+    height: 475px;
+    width: 320px;
+    float: left;
+    position: relative;
 }
 
 section.pagePost.blog.index:first-child h2.indexTitle {
     border-top: none;
 }
+
+section.pagePost.blog.index .entry {
+    padding: 0 10px;
+    margin: 7px 0;
+}
+
+section.pagePost.blog.index .thumbnail {
+    padding: 0 10px;
+    margin: 7px 0 0;
+}
+
+section.pagePost.blog.index .thumbnail img {
+    float: left;
+}
+
+section.pagePost.blog.index a.more {
+    color: #aaa;
+    font-size: 11px;
+    text-decoration: none;
+    display: block;
+}
+
+section.pagePost.blog.index a.more:hover {
+    text-decoration: underline;
+}
+
+section.pagePost.blog.index .comments {
+    text-align: right;
+}
+
+section.pagePost.blog.index .comments a {
+    text-decoration: none;
+}
+
+section.pagePost.blog.index .comments a:hover {
+    text-decoration: underline;
+}
+
 
 /*
     post specific
@@ -467,6 +498,7 @@ section.pagePost.post .infoWrap abbr {
     width: 140px;
     display: inline-block;
     float: left;
+    font-size: 11px;
 }
 
 section.pagePost.post .infoWrapFooter {
@@ -476,6 +508,7 @@ section.pagePost.post .infoWrapFooter {
     margin: 0 10px;
     padding: 10px 0;
     border-bottom: 1px solid #e6e6e6;
+    font-size: 11px;
 }
 
 section.pagePost.post .entry {
@@ -498,6 +531,10 @@ section.pagePost.post .entry blockquote {
 
 section.pagePost.post .entry blockquote {
     padding: 0 160px 0 24px;
+}
+
+section.pagePost.post .entry blockquote p {
+    padding: 0;
 }
 
 /*
@@ -547,6 +584,7 @@ section.pagePost .comments ol li .reply {
     text-align: right;
     margin: 10px 0 0 0;
     clear: left;
+    font-size: 11px;
 }
 
 section.pagePost .comments ol li .reply {
@@ -712,9 +750,8 @@ section.pagePost.page .gallery img.shadow {
     sidebar styles
 */
 section#sidebar {
-    padding: 0 160px 0 0;
     display: inline-block;
-    width: 320px;
+    width: 640px;
 }
 
 section#sidebar .widget {
@@ -765,9 +802,12 @@ form#searchform input#searchsubmit {
     width: 24px;
     border: 1px solid #ccc;
     background-color: #f2f2f2;
-    background-image: -moz-linear-gradient(top, #fafafa 0%, #f2f2f2 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f2f2f2));
+    background-image: url("i/search.png"), -moz-linear-gradient(top, #fafafa 0%, #f2f2f2 100%);
+    background-image: url("i/search.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f2f2f2));
+    background-repeat: no-repeat;
+    background-position: center;
     cursor: pointer;
+    outline: none;
 }
 
 form#searchform input#searchsubmit:hover {
@@ -777,7 +817,7 @@ form#searchform input#searchsubmit:hover {
 form#searchform input#searchsubmit:active {
     background-color: #ddd;
     border: 1px solid #aaa;
-    background-image: none;
+    background-image: url("i/search.png");
     -moz-box-shadow: 0 0 2px rgba(0,0,0,0.5) inset;
 }    
 

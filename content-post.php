@@ -1,4 +1,5 @@
 <?php catalog_pagination(); ?>
+<?php get_sidebar(); ?>
 <section id="post-<?php the_ID() ?>" class="pagePost post blog clearfix">
 
     <div class="infoWrap clearfix fade">
@@ -24,4 +25,3 @@
     </div>
     
 </section>
-<?php get_sidebar(); ?>
