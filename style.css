@@ -549,9 +549,12 @@ section.pagePost .comments h3 {
     padding: 10px 0;
 }
 
+section.pagePost .comments ol {
+    margin-left: -160px;
+}
+
 section.pagePost .comments ol li {
     padding: 20px 0;
-    border-bottom: 1px solid #e6e6e6;
 }
 
 section.pagePost .comments ol li .vcard,
@@ -598,17 +601,38 @@ section.pagePost .comments ol li .reply a {
 
 section.pagePost .comments ol li p {
     width: 460px;
-    float: right;
-    margin: 10px 0;
+    float: left;
+    margin: 10px 0 10px 20px;;
 }
 
-section.pagePost .comments textarea {
+section.pagePost .comments p {
+    margin: 0 0 7px 0;
+}
+
+section.pagePost .comments textarea,
+section.pagePost .comments input {
     font-family: "helvetica neue", helvetica, arial, sans-serif;
     font-size: 12px;
     border: 1px solid #ccc;
-    width: 460px;
-    height: 140px;
     padding: 5px;
+}
+
+section.pagePost .comments input[type="text"] {
+    width: 300px;
+    margin: 0 20px 0 0;
+}
+
+section.pagePost .comments input[type="submit"] {
+    width: 140px;
+    border: 1px solid #aaa;
+    background-color: #f2f2f2;
+    background-image: -moz-linear-gradient(top, #fafafa 0%, #f2f2f2 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f2f2f2));
+}
+
+section.pagePost .comments textarea {
+    width: 620px;
+    height: 140px;
     background-color: #fff;
 }
 
@@ -761,6 +785,10 @@ section#sidebar .widget {
     margin: 10px;
 }
 
+section#sidebar .widget.search {
+    width: 300px;
+}
+
 section#sidebar .widget h3 {
     font-size: 12px;
     color: #aaa;
@@ -780,7 +808,7 @@ form#searchform {
 }
 
 form#searchform input#s {
-    width: 116px;
+    width: 276px;
     height: 24px;
     float: left;
     display: inline-block;

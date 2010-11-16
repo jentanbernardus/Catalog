@@ -126,6 +126,13 @@ body section#secondaryMenu nav ul li:last-child {
 }
 
 /*
+    comments
+*/
+body section.pagePost .comments ol li p {
+    margin: 10px 0;
+}
+
+/*
     sidebar
 */
 body section#sidebar {
@@ -134,10 +141,6 @@ body section#sidebar {
 
 body section#sidebar .widget {
     width: 300px;
-}
-
-body form#searchform input#s {
-    width: 276px;
 }
 
 /*

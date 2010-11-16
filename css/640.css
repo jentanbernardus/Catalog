@@ -51,6 +51,13 @@ body section.pagePost.post .entry blockquote {
 }
 
 /*
+    comments
+*/
+body section.pagePost .comments ol {
+    margin-left: 0;
+}
+
+/*
     sidebar
 */
 body section#sidebar {
@@ -79,13 +86,6 @@ body section.pagePost.page .gallery {
 
 body section.pagePost.page .gallery img {
     max-width: 620px;
-}
-
-/*
-    search
-*/
-body form#searchform input#s {
-    width: 116px;
 }
 
 body footer {
