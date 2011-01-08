@@ -11,6 +11,17 @@ body header nav {
     width: 460px;
 }
 
+body section#content .navigation {
+    width: 620px;
+}
+/*
+    blog index
+*/
+body section.pagePost.blog.index {
+    padding: 0 0 10px 0;
+    width: 640px;
+}  
+
 /*
     blog posts
 */
@@ -51,20 +62,6 @@ body section.pagePost.post .entry blockquote {
 }
 
 /*
-    comments
-*/
-body section.pagePost .comments ol {
-    margin-left: 0;
-}
-
-/*
-    sidebar
-*/
-body section#sidebar {
-    width: 320px;
-}
-
-/*
     project/pages
 */
 body section.pagePost.page .entry {
@@ -86,6 +83,26 @@ body section.pagePost.page .gallery {
 
 body section.pagePost.page .gallery img {
     max-width: 620px;
+}
+
+/*
+    sidebar
+*/
+body section#sidebar {
+    width: 640px;
+    padding: 0;
+    margin: 50px 0 0;
+}
+
+body section#sidebar .widget {
+    width: 140px;
+}
+
+/*
+    search
+*/
+body form#searchform input#s {
+    width: 116px;
 }
 
 body footer {

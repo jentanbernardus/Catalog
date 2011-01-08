@@ -63,22 +63,32 @@ function catalog_init() {
     /*
         Add the meta box for selecting Gallery style.
     */
-    function catalog_add_project_gallery() {
-        add_meta_box( 'project_gallery', __( 'Project Gallery', 'catalog' ), 'catalog_project_gallery_content', 'project' );
+    function catalog_add_project_meta() {
+        add_meta_box( 'project_meta', __( 'Project Settings', 'catalog' ), 'catalog_project_meta_content', 'project' );
     }
-    add_action('add_meta_boxes', 'catalog_add_project_gallery');
+    add_action('add_meta_boxes', 'catalog_add_project_meta');
 
     /*
         The actual content of the meta box.
     */
-    function catalog_project_gallery_content() {
+    function catalog_project_meta_content() {
         global $post;
         $style = get_post_meta($post->ID, 'project_gallery_style', true);
         $exclude = get_post_meta($post->ID, 'project_gallery_exclude', true);
 
         wp_nonce_field( plugin_basename(__FILE__), 'catalog_project_gallery_noncename' );
+        $years = range(date('Y'), date('Y') - 40);
 
-        echo '<p><label for="project_gallery_style">' . __("How should we display the project's media?", 'catalog' ) . '</label> ';
+        echo '<p><label for="project_year">' . __("What year was this project completed?", 'catalog' ) . '</label>';
+        echo '<select id="project_year" name="project_year">';
+
+        foreach ( $years as $y ) {
+            echo "<option value=\"{$y}\">${y}</option>";
+        }
+
+        echo '</select></p>';
+
+        echo '<p><label for="project_gallery_style">' . __("How should we display the project's media?", 'catalog' ) . '</label>';
         
         ?>
     <select id="project_gallery_style" name="project_gallery_style">
@@ -96,7 +106,7 @@ function catalog_init() {
     /* 
         When the project is saved, saves our gallery style
     */
-    function catalog_save_project_gallery( $post_id ) {
+    function catalog_save_project_meta( $post_id ) {
         # Authenticate
         if ( ! wp_verify_nonce( $_POST['catalog_project_gallery_noncename'], plugin_basename(__FILE__) ) )
             return $post_id;
@@ -123,7 +133,7 @@ function catalog_init() {
 
         return true;
     }
-    add_action('save_post', 'catalog_save_project_gallery');
+    add_action('save_post', 'catalog_save_project_meta');
 }
 add_action('init', catalog_init);
 
@@ -205,7 +215,6 @@ function catalog_setup() {
     add_image_size('640-image', 640, 480, false);
     add_image_size('320-image', 320, 200, false);
     add_image_size('square-thumbnail', 50, 50, true);
-    add_image_size('blog-thumbnail', 300, 200, true); // Blog post thumbnails
 }
 add_action( 'after_setup_theme', 'catalog_setup' );
 endif;
@@ -247,7 +256,7 @@ endif;
 */
 if ( ! function_exists( 'catalog_excerpt_more' ) ) :
 function catalog_excerpt_more( $post_excerpt ) {
-    return $post_excerpt.' <a href="'.get_permalink().'" class="more">'. __( '(read more)', 'catalog' ).'</a>';
+    return $post_excerpt.' <a href="'.get_permalink().'" class="more">'. __( 'Read More &raquo;', 'catalog' ).'</a>';
 }
 add_filter('wp_trim_excerpt', 'catalog_excerpt_more');
 endif;
@@ -268,7 +277,7 @@ endif;
 */
 if ( ! function_exists( 'catalog_excerpt_length' ) ) :
 function catalog_excerpt_length( $length ) {
-    return 50;
+    return 25;
 }
 add_filter( 'excerpt_length', 'catalog_excerpt_length' );
 endif;
@@ -282,7 +291,7 @@ function catalog_search_form( $form ) {
     $form = '<form role="search" method="get" id="searchform" action="' . trailingslashit(get_bloginfo('url')) . '">';
     $form .= '<div class="clearfix searchContainer">';
     $form .= '<input type="text" name="s" id="s" class="left" placeholder="Search" value="' . get_search_query() . '" />';
-    $form .= '<input type="submit" name="searchsubmit" id="searchsubmit" class="left" value="" />';
+    $form .= '<input type="submit" name="searchsubmit" id="searchsubmit" class="left" value="&rarr;" />';
     $form .= '</div>';
     $form .= '</form>'; 
 
@@ -294,9 +303,11 @@ endif;
 /*
     Comment template
 */
+/*
+    Comment template
+*/
 if ( ! function_exists('catalog_comment') ) :
 function catalog_comment( $comment, $args, $depth ) {
-    die();
     $GLOBALS['comment'] = $comment;
     switch ( $comment->comment_type ) :
         case '' :
@@ -305,17 +316,17 @@ function catalog_comment( $comment, $args, $depth ) {
         <div id="comment-<?php comment_ID(); ?>">
         <div class="comment-author vcard">
             <?php echo get_avatar( $comment, 40 ); ?>
-            <?php printf( __( '%s <span class="says">says:</span>', 'catalog' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+            <?php printf( __( '%s <span class="says">says:</span>', 'twentyten' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
         </div><!-- .comment-author .vcard -->
         <?php if ( $comment->comment_approved == '0' ) : ?>
-            <em><?php _e( 'Your comment is awaiting moderation.', 'catalog' ); ?></em>
+            <em><?php _e( 'Your comment is awaiting moderation.', 'twentyten' ); ?></em>
             <br />
         <?php endif; ?>
 
         <div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
             <?php
                 /* translators: 1: date, 2: time */
-                printf( __( '%1$s at %2$s', 'catalog' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'catalog' ), ' ' );
+                printf( __( '%1$s at %2$s', 'twentyten' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' );
             ?>
         </div><!-- .comment-meta .commentmetadata -->
 
@@ -332,7 +343,7 @@ function catalog_comment( $comment, $args, $depth ) {
         case 'trackback' :
     ?>
     <li class="post pingback">
-        <p><?php _e( 'Pingback:', 'catalog' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'catalog'), ' ' ); ?></p>
+        <p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'twentyten'), ' ' ); ?></p>
     <?php
             break;
     endswitch;

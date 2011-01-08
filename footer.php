@@ -1,7 +1,11 @@
-  </div> 
-</div>
+        </div> 
+    </div>
+
 <footer class="clearfix">
-  &copy; <?php the_time('Y') ?> <?php echo wp_specialchars( get_bloginfo('name'), 1 ) ?><br>
+    &copy; <?php the_time('Y') ?> <?php echo wp_specialchars( get_bloginfo('name'), 1 ) ?><br>
 </footer>
+
+<?php wp_footer(); ?>
+
 </body>
 </html>

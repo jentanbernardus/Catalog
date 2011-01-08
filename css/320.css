@@ -25,9 +25,17 @@ body section#content .navigation {
 /*
     blog index specific
 */
+body section.pagePost.blog.index {
+    width: 320px;
+}
+
 body section.pagePost.blog.index .indexContent {
     display: none;
 }
+
+body section.pagePost .meta .comments {
+    text-align: right;
+} 
 
 /*
     blog post specific
@@ -64,36 +72,6 @@ body section.pagePost.post .entry {
     width: 300px;
 }
 
-/* 
-    comments section
-*/
-body section.pagePost .comments ol li {
-    margin: 0;
-}
-
-body section.pagePost .comments ol li .vcard img {
-    margin: 0 10px 0 0;
-    float: left;
-}
-
-body section.pagePost .comments ol li .comment-meta,
-body section.pagePost .comments ol li .reply {
-    width: 300px;
-    float: left;
-    text-align: left;
-    margin: 10px 0 0 0;
-    clear: none;
-}
-
-body section.pagePost .comments ol li p {
-    width: 300px;
-    float: left;
-}
-
-body section.pagePost .comments textarea {
-    width: 300px;
-}
-
 /*
     page specific
 */
@@ -126,13 +104,6 @@ body section#secondaryMenu nav ul li:last-child {
 }
 
 /*
-    comments
-*/
-body section.pagePost .comments ol li p {
-    margin: 10px 0;
-}
-
-/*
     sidebar
 */
 body section#sidebar {
@@ -141,6 +112,10 @@ body section#sidebar {
 
 body section#sidebar .widget {
     width: 300px;
+}
+
+body form#searchform input#s {
+    width: 276px;
 }
 
 /*

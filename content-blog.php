@@ -6,22 +6,8 @@
     
     <div class="meta clearfix">
         <abbr class="published" title="<?php the_time('Y-m-d\TH:i:sO') ?>"><?php the_time( get_option( 'date_format' ) ); ?></abbr>
-        <span class="comments">
-            <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
-        </span>
-    </div>
-
-    <div class="thumbnail clearfix">
-    <?php 
-        if ( has_post_thumbnail() ) 
-            the_post_thumbnail('blog-thumbnail');
-        else
-            echo '<img src="<?php get_bloginfo(\'stylesheet_directory\') ?>/i/nothumb.png" alt="<?php the_title() ?> has no thumbnail.">';
-    ?>
-    </div>
-
-    <div class="entry">
-        <?php the_excerpt(); ?>
+        <span class="categories overflow">posted in <?php the_category(', ') ?></span>
+        <span class="comments"><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></span>
     </div>
 
 </section>

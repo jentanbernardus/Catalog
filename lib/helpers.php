@@ -52,7 +52,7 @@ function catalog_pagination( $filename = 'pagination' ) {
     if ( file_exists($fs) ) {
         include $fs;
     }
-    elseif ( $ft ) {
+    elseif ( file_exists($ft) ) {
         include $ft;
     }
     else { 

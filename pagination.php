@@ -1,20 +1,6 @@
-<?php if ( ! is_single() ) : ?>
-
-<div class="navigation pageNav fade clearfix">
-    <div class="alignLeft">
-        <div class="previousPage"><?php next_posts_link('Older entries') ?></div>
-    </div>
-
-    <div class="alignRight">
-        <div class="nextPage"><?php previous_posts_link('Newer entries') ?></div>
-    </div>
+<?php global $wp_query; if ( $wp_query->max_num_pages > 1 ) : ?>
+<div class="pagination clearfix">
+    <span class="prev button"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'sourdough' ) ); ?></span>
+    <span class="next button"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'sourdough' ) ); ?></span>
 </div>
-
-<?php else: ?>
-
-<div class="navigation postNav fade clearfix">
-    <div class="previousPage"><?php previous_post_link( '%link', 'Prev' ); ?></div>
-    <div class="nextPage"><?php next_post_link( '%link', 'Next' ); ?></div>
-</div>
-
 <?php endif; ?>

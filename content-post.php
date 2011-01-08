@@ -1,5 +1,4 @@
 <?php catalog_pagination(); ?>
-<?php get_sidebar(); ?>
 <section id="post-<?php the_ID() ?>" class="pagePost post blog clearfix">
 
     <div class="infoWrap clearfix fade">
@@ -21,7 +20,8 @@
     </div>
     
     <div class="comments">
-        <?php comments_template(); ?>
+        <?php comments_template( '', true ); ?>
     </div>
     
 </section>
+<?php get_sidebar(); ?>

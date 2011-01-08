@@ -4,9 +4,15 @@
       <section id="content">
         <?php
         /*
-          Include loop-post.php or fallback loop.php
+            Single post loop.
         */
-        get_template_part('loop', 'post');
+        while ( have_posts() ) {
+            the_post();
+            /*
+                Include content file.
+            */
+            get_template_part( 'content', 'post' );
+        }
         ?>
       </section>
     </section>

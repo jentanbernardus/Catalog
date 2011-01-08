@@ -33,7 +33,6 @@ body {
     font-family: "helvetica neue", helvetica, arial, sans-serif;
     font-size: 12px;
     line-height: 21px;
-    letter-spacing: 0.25px;
     color: #000;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -237,7 +236,7 @@ section#content .navigation .nextPage {
 
 section#content .navigation .nextPage span.inactive,
 section#content .navigation .previousPage span.inactive {
-    color: #aaa;
+    color: #e6e6e6;
 }
 
 section#content .navigation a {
@@ -338,7 +337,6 @@ section.pagePost abbr {
 section.pagePost .meta {
     color: #aaa;
     width: 100%;
-    font-size: 11px;
 }
 
 section.pagePost .meta a,
@@ -365,6 +363,10 @@ section.pagePost .meta .comments {
 
 section.pagePost .meta .categories {
     width: 300px;
+}
+
+section.pagePost .meta .comments {
+    text-align: right;
 }
 
 section.pagePost .entry a {
@@ -416,53 +418,19 @@ section.pagePost .entry h3 {
     Blog index
 */
 section.pagePost.blog.index {
-    height: 475px;
-    width: 320px;
-    float: left;
-    position: relative;
+    padding: 0 0 10px 0;
+    width: 640px;
+    float: right;
+}
+
+section.pagePost.blog.index h2.indexTitle {
+    padding: 10px 0 0;
+    border-top: 1px solid #e6e6e6;
 }
 
 section.pagePost.blog.index:first-child h2.indexTitle {
     border-top: none;
 }
-
-section.pagePost.blog.index .entry {
-    padding: 0 10px;
-    margin: 7px 0;
-}
-
-section.pagePost.blog.index .thumbnail {
-    padding: 0 10px;
-    margin: 7px 0 0;
-}
-
-section.pagePost.blog.index .thumbnail img {
-    float: left;
-}
-
-section.pagePost.blog.index a.more {
-    color: #aaa;
-    font-size: 11px;
-    text-decoration: none;
-    display: block;
-}
-
-section.pagePost.blog.index a.more:hover {
-    text-decoration: underline;
-}
-
-section.pagePost.blog.index .comments {
-    text-align: right;
-}
-
-section.pagePost.blog.index .comments a {
-    text-decoration: none;
-}
-
-section.pagePost.blog.index .comments a:hover {
-    text-decoration: underline;
-}
-
 
 /*
     post specific
@@ -498,7 +466,6 @@ section.pagePost.post .infoWrap abbr {
     width: 140px;
     display: inline-block;
     float: left;
-    font-size: 11px;
 }
 
 section.pagePost.post .infoWrapFooter {
@@ -508,7 +475,6 @@ section.pagePost.post .infoWrapFooter {
     margin: 0 10px;
     padding: 10px 0;
     border-bottom: 1px solid #e6e6e6;
-    font-size: 11px;
 }
 
 section.pagePost.post .entry {
@@ -531,117 +497,6 @@ section.pagePost.post .entry blockquote {
 
 section.pagePost.post .entry blockquote {
     padding: 0 160px 0 24px;
-}
-
-section.pagePost.post .entry blockquote p {
-    padding: 0;
-}
-
-/*
-    comments template
-*/
-section.pagePost .comments {
-    margin: 20px 10px;
-}
-
-section.pagePost .comments h3 {
-    font-size: 12px;
-    padding: 10px 0;
-}
-
-section.pagePost .comments ol {
-    margin-left: -160px;
-}
-
-section.pagePost .comments ol li {
-    padding: 20px 0;
-}
-
-section.pagePost .comments ol li .vcard,
-section.pagePost .comments ol li .vcard span,
-section.pagePost .comments ol li .vcard cite {
-    vertical-align: top;
-    height: 32px;
-    line-height: 32px;
-}
-
-section.pagePost .comments ol li .vcard span {
-    margin: 0 0 0 5px;
-}
-
-section.pagePost .comments ol li .vcard cite {
-    font-style: normal;
-    font-weight: bold;
-    float: left;
-}
-
-section.pagePost .comments ol li .vcard img {
-    margin: 0 20px 0 108px;
-    float: left;
-}
-
-section.pagePost .comments ol li .comment-meta,
-section.pagePost .comments ol li .reply {
-    width: 140px;
-    float: left;
-    text-align: right;
-    margin: 10px 0 0 0;
-    clear: left;
-    font-size: 11px;
-}
-
-section.pagePost .comments ol li .reply {
-    margin: 0;
-}
-
-section.pagePost .comments ol li .comment-meta a,
-section.pagePost .comments ol li .reply a {
-    color: #aaa;
-}
-
-section.pagePost .comments ol li p {
-    width: 460px;
-    float: left;
-    margin: 10px 0 10px 20px;;
-}
-
-section.pagePost .comments p {
-    margin: 0 0 7px 0;
-}
-
-section.pagePost .comments textarea,
-section.pagePost .comments input {
-    font-family: "helvetica neue", helvetica, arial, sans-serif;
-    font-size: 12px;
-    border: 1px solid #ccc;
-    padding: 5px;
-}
-
-section.pagePost .comments input[type="text"] {
-    width: 300px;
-    margin: 0 20px 0 0;
-}
-
-section.pagePost .comments input[type="submit"] {
-    width: 140px;
-    border: 1px solid #aaa;
-    background-color: #f2f2f2;
-    background-image: -moz-linear-gradient(top, #fafafa 0%, #f2f2f2 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f2f2f2));
-}
-
-section.pagePost .comments textarea {
-    width: 620px;
-    height: 140px;
-    background-color: #fff;
-}
-
-section.pagePost .comments textarea:focus {
-    background-color: #ffff00;
-}
-
-section#content section.pagePost .comments .navigation {
-    display: none; /* navigation showing up in comments template, temp fix */
 }
 
 /*
@@ -774,8 +629,9 @@ section.pagePost.page .gallery img.shadow {
     sidebar styles
 */
 section#sidebar {
+    padding: 0 160px 0 0;
     display: inline-block;
-    width: 640px;
+    width: 320px;
 }
 
 section#sidebar .widget {
@@ -783,10 +639,6 @@ section#sidebar .widget {
     display: inline-block;
     float: left;
     margin: 10px;
-}
-
-section#sidebar .widget.search {
-    width: 300px;
 }
 
 section#sidebar .widget h3 {
@@ -808,7 +660,7 @@ form#searchform {
 }
 
 form#searchform input#s {
-    width: 276px;
+    width: 116px;
     height: 24px;
     float: left;
     display: inline-block;
@@ -830,12 +682,9 @@ form#searchform input#searchsubmit {
     width: 24px;
     border: 1px solid #ccc;
     background-color: #f2f2f2;
-    background-image: url("i/search.png"), -moz-linear-gradient(top, #fafafa 0%, #f2f2f2 100%);
-    background-image: url("i/search.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f2f2f2));
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: -moz-linear-gradient(top, #fafafa 0%, #f2f2f2 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #f2f2f2));
     cursor: pointer;
-    outline: none;
 }
 
 form#searchform input#searchsubmit:hover {
@@ -845,7 +694,7 @@ form#searchform input#searchsubmit:hover {
 form#searchform input#searchsubmit:active {
     background-color: #ddd;
     border: 1px solid #aaa;
-    background-image: url("i/search.png");
+    background-image: none;
     -moz-box-shadow: 0 0 2px rgba(0,0,0,0.5) inset;
 }    
 
@@ -872,7 +721,6 @@ footer a {
     clearfix 
 */
 
-.comment:after,
 p:after,
 .clearfix:after {
     content: ".";
@@ -883,13 +731,11 @@ p:after,
     height: 0;
 }
 
-html[xmlns] .comment,
 html[xmlns] p, 
 html[xmlns] .clearfix {
     display: block;
 }
 
-* html .comment,
 * html p,
 * html .clearfix {
     height: 1%;
